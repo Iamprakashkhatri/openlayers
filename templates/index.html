@@ -1,0 +1,33 @@
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Openlayers web map</title>
+    <link href="{% static 'styles.css' %}" rel="stylesheet" type="text/css"  />
+    <link href="{% static 'libs/v6.5.0-dist/ol.css' %}" rel="stylesheet" type="text/css"  />
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-1">
+            <div class="sidebar">
+                <h2>Base Layers</h2>
+                <input type="radio" name ='baseLayerRadioButton' value='OSMStandard' checked>OSM Standard<br>
+                <input type="radio" name ='baseLayerRadioButton' value='OSMHumanitarian'>OSM Humanitarian<br>
+                <input type="radio" name ='baseLayerRadioButton' value='StamenTerrain'>Stamen Terrain<br>
+            </div>
+        </div>
+        <div class="grid-2">
+            <div id='js-map' class='map'></div>
+        </div>
+    </div>
+    <div class ='overlay-container'>
+        <span class = 'overlay-text' id='feature-name'></span><br>
+        <span class = 'overlay-text' id='feature-additional-info'></span><br>
+    </div>
+    {% block page_content %}{% endblock %}
+    <script src="{% static 'main.js' %}"></script>
+    <script src="{% static 'libs/v6.5.0-dist/ol.js' %}"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</body>
+</html>

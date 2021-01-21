@@ -1,0 +1,17 @@
+{% block page_content %}
+<div class="grid-container">
+        <div class="grid-1">
+            <div class="sidebar">
+                <h2>Base Layers</h2>
+                <input type="radio" name ='baseLayerRadioButton' value='OSMStandard' checked>OSM Standard<br>
+                <input type="radio" name ='baseLayerRadioButton' value='OSMHumanitarian'>OSM Humanitarian<br>
+                <input type="radio" name ='baseLayerRadioButton' value='StamenTerrain'>Stamen Terrain<br>
+            </div>
+        </div>
+        <div class="grid-2">
+            <div id='js-map' class='map'></div>
+        </div>
+    </div>
+
+    
+{% endblock page_content %}
