@@ -22,4 +22,6 @@ from .views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test',test),
+    path('animation',animation),
+    path('lodhaindex',lodhaindex)
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

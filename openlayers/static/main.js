@@ -2,9 +2,9 @@ window.onload = init;
 function init(){
     const map = new ol.Map({
       view:new ol.View({
-          center:[9275174.760236427,3228700.074765845],
-          zoom:7,
-          maxZoom:10,
+          center:[49253157.912697524, 3344663.1138488394 ],
+          zoom:10,
+          maxZoom:18,
           minZoom:2,
         //   rotation:0.5
       }),
@@ -16,9 +16,9 @@ function init(){
       target: 'js-map'
     })
 
-    // map.on('click',function(e){
-    //     console.log(e.coordinate);
-    // })
+    map.on('click',function(e){
+        console.log(e.coordinate);
+    })
 
     //Basemaps Layers
     const openStreetMapStandard = new ol.layer.Tile({
@@ -57,7 +57,7 @@ function init(){
     for(let baseLayerElement of baseLayerElements){
     baseLayerElement.addEventListener('change',function(){
         let baseLayerElementValue = this.value;
-        // console.log(baseLayerElement)
+        console.log(baseLayerElement)
         baseLayerGroup.getLayers().forEach(function(element,index,array){
          let baseLayerTitle = element.get('title');
          element.setVisible(baseLayerTitle===baseLayerElementValue)

@@ -1,0 +1,18 @@
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Openlayers web map</title>
+    <link href="{% static 'styles.css' %}" rel="stylesheet" type="text/css"  />
+    <link href="{% static 'libs/v6.5.0-dist/ol.css' %}" rel="stylesheet" type="text/css"  />
+</head>
+<body>
+    <div id='lodha' class='map'>Hello World</div>
+    {% block page_content %}{% endblock %}
+    <script src="{% static 'libs/v6.5.0-dist/ol.js' %}"></script>
+    <script src="{% static 'lodhamain.js' %}"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+</body>
+</html>
