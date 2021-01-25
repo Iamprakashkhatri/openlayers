@@ -16,9 +16,9 @@ function init(){
       target: 'js-map'
     })
 
-    map.on('click',function(e){
-        console.log(e.coordinate);
-    })
+    // map.on('click',function(e){
+    //     console.log(e.coordinate);
+    // })
 
     //Basemaps Layers
     const openStreetMapStandard = new ol.layer.Tile({
